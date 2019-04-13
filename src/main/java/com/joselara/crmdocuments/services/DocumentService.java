@@ -1,7 +1,6 @@
 package com.joselara.crmdocuments.services;
 
 import com.joselara.crmdocuments.models.Document;
-import com.joselara.crmdocuments.models.dto.DocumentDTO;
 import com.joselara.crmdocuments.models.enums.DocumentType;
 import com.joselara.crmdocuments.repositories.DocumentRepository;
 import javassist.NotFoundException;
