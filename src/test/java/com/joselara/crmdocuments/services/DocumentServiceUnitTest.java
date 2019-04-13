@@ -62,7 +62,7 @@ public class DocumentServiceUnitTest {
 
         List<Document> actualDocumentList = cut.getAllDocuments();
 
-        assertEquals(actualDocumentList.get(0), document);
-        assertEquals(actualDocumentList.size(), 1);
+        assertEquals(document, actualDocumentList.get(0));
+        assertEquals(1, actualDocumentList.size());
     }
 }

@@ -38,12 +38,11 @@ public class DocumentServiceIntegrationTest {
 
         List<Document> documentList = cut.getAllDocuments();
 
-        assertEquals(documentList.size(),1);
-        assertEquals(documentList.get(0).getPath(), expectedPath);
+        assertEquals(1, documentList.size());
+        assertEquals(expectedPath, documentList.get(0).getPath());
 
         documentRepository.delete(documentList.get(0));
 
-        assertEquals(documentRepository.findAll().size(), 0);
+        assertEquals(0, documentRepository.findAll().size());
     }
-
 }
