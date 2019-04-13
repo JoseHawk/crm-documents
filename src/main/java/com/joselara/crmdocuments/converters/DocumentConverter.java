@@ -13,7 +13,6 @@ public class DocumentConverter extends ConfigurableMapper {
     protected void configure(MapperFactory factory) {
 
         factory.classMap(DocumentDTO.class, Document.class)
-                .field("documentId", "documentId")
                 .field("externalId", "externalId")
                 .field("type", "type")
                 .field("path", "path")

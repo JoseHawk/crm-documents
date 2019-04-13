@@ -20,12 +20,12 @@ public class DocumentConverterUnitTest {
     @Test
     public void mapTest() {
         DocumentDTO documentDTO = DocumentDTO.builder()
-                .documentId(UUID.randomUUID())
+                .externalId(UUID.randomUUID())
                 .path("testPath")
                 .build();
 
         Document document = cut.map(documentDTO, Document.class);
 
-        assertEquals(document.getDocumentId(), documentDTO.getDocumentId());
+        assertEquals(document.getExternalId(), documentDTO.getExternalId());
     }
 }

@@ -5,9 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Tolerate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 @Entity
@@ -19,10 +18,14 @@ public class Document {
     @GeneratedValue
     private UUID documentId;
 
+    @NotNull
     private UUID externalId;
 
+    @NotNull
+    @Enumerated(EnumType.STRING)
     private DocumentType type;
 
+    @NotNull
     private String path;
 
     @Tolerate
