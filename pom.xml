@@ -23,6 +23,8 @@
         <nexus.plugin.version>1.6.8</nexus.plugin.version>
         <jacoco.plugin.version>0.8.3</jacoco.plugin.version>
         <commons.version>2.6</commons.version>
+        <jasypt.version>2.0.0</jasypt.version>
+        <bouncy.castle.version>1.59</bouncy.castle.version>
 
         <sonar.exclusions>
             **/*Application.java,
@@ -107,6 +109,18 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+            <version>${jasypt.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>${bouncy.castle.version}</version>
         </dependency>
     </dependencies>
 
